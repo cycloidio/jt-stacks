@@ -16,5 +16,5 @@ config:
       pipeline:
         path: pipeline/pipeline.yml
       variables:
-        destination: ($ project $)/pipeline/variables-($ environment $).yml
+        destination: ($ .organization_canonical $)/($ .project $)/($ .environment $)/($ .component $).yml
         path: pipeline/variables.sample.yml
