@@ -1,0 +1,19 @@
+use_cases:
+- name: "Demo usecase"
+  sections:
+  - name: "My section"
+    groups:
+    - name: "My group"
+      technologies: ["pipeline"]
+      vars:
+        - name: "Repository"
+          widget: cy_crs # or cy_scs
+          key: myrepo
+          type: "string"
+
+        - name: "branch"
+          widget: cy_branch
+          key: myvariable
+          source: myrepo
+          type: "string"
+          default: "config"

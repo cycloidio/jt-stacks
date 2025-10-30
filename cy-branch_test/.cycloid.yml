@@ -1,0 +1,23 @@
+# Use the latest version 2 of the Cycloid stack engine.
+version: 3
+
+name: cy-branch test
+canonical: cy-branch-test
+author: '{{ stack_author }}'
+# Fill in the stack details.
+description: 'The bare minimum files to build your stack from scratch.'
+image: https://raw.githubusercontent.com/cycloidio/bootstrap-stacks/master/blank-sample/thumbnail.png
+template: true
+status: 'public'
+
+# Add use cases to the stack.
+# See: https://docs.cycloid.io/manage/pipeline/multi-use-case.html#multiple-use-case
+config:
+  default:
+    name: 'Default'
+    pipeline:
+      pipeline:
+        path: 'pipeline/pipeline.yml'
+      variables:
+        path: 'pipeline/variables.sample.yml'
+        destination: '($ .project $)/pipeline/variables-($ .environment $).yml'
