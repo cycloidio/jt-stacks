@@ -11,7 +11,7 @@ module "instance" {
   source = "./module-aws"
 
   env           = var.env
-  instance_type = "t3.small"
+  instance_type = "t3.nano"
   organization  = var.organization
   project       = var.project
 }
